@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+
+    baserow:
+        image: baserow/baserow:1.19.1 
+        container_name: baserow
+        environment:
+            - BASEROW_PUBLIC_URL=http://localhost:8200       # https://<YOUR_DOMAIN> or http://<YOUR_IP>:<PORT>
+            - WEB_FRONTEND_PORT=8200
+        volumes:
+            - ./baserow_data:/baserow/data
+        ports:
+            - '8200:80'
+            - '443:443'
+        restart: unless-stopped
+
