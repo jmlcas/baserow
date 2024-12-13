@@ -1,9 +1,7 @@
-version: '3.4'
-
 services:
 
     baserow:
-        image: baserow/baserow:1.19.1 
+        image: baserow/baserow:1.29.3 
         container_name: baserow
         environment:
             BASEROW_PUBLIC_URL: 'http://localhost:8200'       # https://<YOUR_DOMAIN> or http://<YOUR_IP>:<PORT>
@@ -12,6 +10,6 @@ services:
             - ./baserow_data:/baserow/data
         ports:
             - '8200:80'
-            - '443:443'
+            - '8243:443'
         restart: unless-stopped
 
