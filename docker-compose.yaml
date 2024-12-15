@@ -1,10 +1,10 @@
 services:
 
     baserow:
-        image: baserow/baserow:latest 
+        image: baserow/baserow:latest
         container_name: baserow
         environment:
-            BASEROW_PUBLIC_URL: 'http://localhost:8200'       # https://<YOUR_DOMAIN> or http://<YOUR_IP>:<PORT>
+            BASEROW_PUBLIC_URL: 'http://localhost:8200'      # https://<YOUR_DOMAIN> or http://<YOUR_IP>:<PORT>
             WEB_FRONTEND_PORT: '8200'
         volumes:
             - ./baserow_data:/baserow/data
